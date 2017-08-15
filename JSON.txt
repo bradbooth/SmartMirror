@@ -1,0 +1,482 @@
+
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "conditions": 1
+  ,
+  "forecast": 1
+  }
+	}
+  ,	"current_observation": {
+		"image": {
+		"url":"http://icons.wxug.com/graphics/wu2/logo_130x80.png",
+		"title":"Weather Underground",
+		"link":"http://www.wunderground.com"
+		},
+		"display_location": {
+		"full":"Toronto, Ontario",
+		"city":"Toronto",
+		"state":"ON",
+		"state_name":"Ontario",
+		"country":"CA",
+		"country_iso3166":"CA",
+		"zip":"00000",
+		"magic":"1",
+		"wmo":"71265",
+		"latitude":"43.63000107",
+		"longitude":"-79.40000153",
+		"elevation":"77.00000000"
+		},
+		"observation_location": {
+		"full":"Toronto, ",
+		"city":"Toronto",
+		"state":"",
+		"country":"CA",
+		"country_iso3166":"CA",
+		"latitude":"43.62768173",
+		"longitude":"-79.39672852",
+		"elevation":"253 ft"
+		},
+		"estimated": {
+		},
+		"station_id":"CYTZ",
+		"observation_time":"Last Updated on May 17, 7:00 PM EDT",
+		"observation_time_rfc822":"Tue, 17 May 2016 19:00:00 -0400",
+		"observation_epoch":"1463526000",
+		"local_time_rfc822":"Tue, 17 May 2016 19:07:08 -0400",
+		"local_epoch":"1463526428",
+		"local_tz_short":"EDT",
+		"local_tz_long":"America/Montreal",
+		"local_tz_offset":"-0400",
+		"weather":"Clear",
+		"temperature_string":"55 F (13 C)",
+		"temp_f":55,
+		"temp_c":13,
+		"relative_humidity":"47%",
+		"wind_string":"From the West at 6 MPH",
+		"wind_dir":"West",
+		"wind_degrees":260,
+		"wind_mph":6,
+		"wind_gust_mph":0,
+		"wind_kph":9,
+		"wind_gust_kph":0,
+		"pressure_mb":"1021",
+		"pressure_in":"30.16",
+		"pressure_trend":"-",
+		"dewpoint_string":"36 F (2 C)",
+		"dewpoint_f":36,
+		"dewpoint_c":2,
+		"heat_index_string":"NA",
+		"heat_index_f":"NA",
+		"heat_index_c":"NA",
+		"windchill_string":"NA",
+		"windchill_f":"NA",
+		"windchill_c":"NA",
+		"feelslike_string":"55 F (13 C)",
+		"feelslike_f":"55",
+		"feelslike_c":"13",
+		"visibility_mi":"9.0",
+		"visibility_km":"14.5",
+		"solarradiation":"--",
+		"UV":"1","precip_1hr_string":"-9999.00 in (-9999.00 mm)",
+		"precip_1hr_in":"-9999.00",
+		"precip_1hr_metric":"--",
+		"precip_today_string":"0.00 in (0.0 mm)",
+		"precip_today_in":"0.00",
+		"precip_today_metric":"0.0",
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"forecast_url":"http://www.wunderground.com/global/stations/71265.html",
+		"history_url":"http://www.wunderground.com/history/airport/CYTZ/2016/5/17/DailyHistory.html",
+		"ob_url":"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=43.62768173,-79.39672852",
+		"nowcast":""
+	}
+		,
+	"forecast":{
+		"txt_forecast": {
+		"date":"5:04 PM EDT",
+		"forecastday": [
+		{
+		"period":0,
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"title":"Tuesday",
+		"fcttext":"Mainly clear. Lows overnight in the mid 40s.",
+		"fcttext_metric":"Mostly clear. Low 6C.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":1,
+		"icon":"nt_clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"title":"Tuesday Night",
+		"fcttext":"A few passing clouds, otherwise generally clear. Low 44F. Winds N at 10 to 15 mph.",
+		"fcttext_metric":"Mainly clear. Low 6C. Winds N at 15 to 25 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":2,
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"title":"Wednesday",
+		"fcttext":"Intervals of clouds and sunshine. High 56F. Winds ESE at 5 to 10 mph.",
+		"fcttext_metric":"Partly cloudy skies. High 13C. Winds ESE at 10 to 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":3,
+		"icon":"nt_partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+		"title":"Wednesday Night",
+		"fcttext":"A few clouds. Low 47F. Winds NNW at 5 to 10 mph.",
+		"fcttext_metric":"A few clouds. Low 8C. Winds NNW at 10 to 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":4,
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"title":"Thursday",
+		"fcttext":"Partly cloudy skies. High around 60F. Winds SW at 5 to 10 mph.",
+		"fcttext_metric":"Sunshine and clouds mixed. High around 15C. Winds SW at 10 to 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":5,
+		"icon":"nt_clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"title":"Thursday Night",
+		"fcttext":"Clear skies. Low 48F. Winds NW at 5 to 10 mph.",
+		"fcttext_metric":"A mostly clear sky. Low 9C. Winds NW at 10 to 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":6,
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"title":"Friday",
+		"fcttext":"A mainly sunny sky. High near 65F. Winds S at 5 to 10 mph.",
+		"fcttext_metric":"Sunny skies. High 18C. Winds S at 10 to 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":7,
+		"icon":"nt_partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+		"title":"Friday Night",
+		"fcttext":"A few clouds from time to time. Low 51F. Winds light and variable.",
+		"fcttext_metric":"Partly cloudy skies. Low 11C. Winds light and variable.",
+		"pop":"0"
+		}
+		]
+		},
+		"simpleforecast": {
+		"forecastday": [
+		{"date":{
+	"epoch":"1463526000",
+	"pretty":"7:00 PM EDT on May 17, 2016",
+	"day":17,
+	"month":5,
+	"year":2016,
+	"yday":137,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"May",
+	"monthname_short":"May",
+	"weekday_short":"Tue",
+	"weekday":"Tuesday",
+	"ampm":"PM",
+	"tz_short":"EDT",
+	"tz_long":"America/Montreal"
+},
+		"period":1,
+		"high": {
+		"fahrenheit":"55",
+		"celsius":"13"
+		},
+		"low": {
+		"fahrenheit":"44",
+		"celsius":"7"
+		},
+		"conditions":"Clear",
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": null,
+		"mm": null
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": null,
+		"cm": null
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 9,
+		"kph": 15,
+		"dir": "SSW",
+		"degrees": 0
+		},
+		"avewind": {
+		"mph": 4,
+		"kph": 6,
+		"dir": "West",
+		"degrees": 0
+		},
+		"avehumidity": 49,
+		"maxhumidity": 0,
+		"minhumidity": 0
+		}
+		,
+		{"date":{
+	"epoch":"1463612400",
+	"pretty":"7:00 PM EDT on May 18, 2016",
+	"day":18,
+	"month":5,
+	"year":2016,
+	"yday":138,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"May",
+	"monthname_short":"May",
+	"weekday_short":"Wed",
+	"weekday":"Wednesday",
+	"ampm":"PM",
+	"tz_short":"EDT",
+	"tz_long":"America/Montreal"
+},
+		"period":2,
+		"high": {
+		"fahrenheit":"56",
+		"celsius":"13"
+		},
+		"low": {
+		"fahrenheit":"47",
+		"celsius":"8"
+		},
+		"conditions":"Partly Cloudy",
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 10,
+		"kph": 16,
+		"dir": "ESE",
+		"degrees": 119
+		},
+		"avewind": {
+		"mph": 6,
+		"kph": 10,
+		"dir": "ESE",
+		"degrees": 119
+		},
+		"avehumidity": 58,
+		"maxhumidity": 0,
+		"minhumidity": 0
+		}
+		,
+		{"date":{
+	"epoch":"1463698800",
+	"pretty":"7:00 PM EDT on May 19, 2016",
+	"day":19,
+	"month":5,
+	"year":2016,
+	"yday":139,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"May",
+	"monthname_short":"May",
+	"weekday_short":"Thu",
+	"weekday":"Thursday",
+	"ampm":"PM",
+	"tz_short":"EDT",
+	"tz_long":"America/Montreal"
+},
+		"period":3,
+		"high": {
+		"fahrenheit":"60",
+		"celsius":"16"
+		},
+		"low": {
+		"fahrenheit":"48",
+		"celsius":"9"
+		},
+		"conditions":"Partly Cloudy",
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 10,
+		"kph": 16,
+		"dir": "SW",
+		"degrees": 229
+		},
+		"avewind": {
+		"mph": 9,
+		"kph": 14,
+		"dir": "SW",
+		"degrees": 229
+		},
+		"avehumidity": 55,
+		"maxhumidity": 0,
+		"minhumidity": 0
+		}
+		,
+		{"date":{
+	"epoch":"1463785200",
+	"pretty":"7:00 PM EDT on May 20, 2016",
+	"day":20,
+	"month":5,
+	"year":2016,
+	"yday":140,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"May",
+	"monthname_short":"May",
+	"weekday_short":"Fri",
+	"weekday":"Friday",
+	"ampm":"PM",
+	"tz_short":"EDT",
+	"tz_long":"America/Montreal"
+},
+		"period":4,
+		"high": {
+		"fahrenheit":"65",
+		"celsius":"18"
+		},
+		"low": {
+		"fahrenheit":"51",
+		"celsius":"11"
+		},
+		"conditions":"Clear",
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 10,
+		"kph": 16,
+		"dir": "S",
+		"degrees": 177
+		},
+		"avewind": {
+		"mph": 8,
+		"kph": 13,
+		"dir": "S",
+		"degrees": 177
+		},
+		"avehumidity": 51,
+		"maxhumidity": 0,
+		"minhumidity": 0
+		}
+		]
+		}
+	}
+}

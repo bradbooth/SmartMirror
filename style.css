@@ -1,0 +1,185 @@
+
+body {
+
+	background-color: black;
+}
+
+
+h1, h2, h3 , #am, #pm{
+	font-family: 'Roboto';
+	color:white;
+	position: absolute;
+	font-weight: 300;
+}
+
+img {
+	position:absolute;
+}
+
+#timeContainer, #dateContainer, #currentWeatherContainer, #futureWeatherContainer, #locationContainer {
+	background-color: black;
+}
+
+
+/*****TIME*****/
+#timeContainer {
+	position: absolute;
+	height: 80px;
+	width: 265px;
+	right:35px;
+	top:60px;
+}
+
+#hour {
+	font-size: 80;
+	left:5px;
+	top:-60px;
+}
+
+#minute {
+	font-size: 80;	
+	left:90px;
+	top: -60px;
+}
+
+#second {
+	font-size: 50px;
+	top:-50px;
+	left:200px;
+}
+
+#am {
+	font-size: 15px;
+	top:40px;
+	left:203px;
+}
+
+#pm {
+	font-size: 15px;
+	top:40px;
+	left:230px;
+}
+
+/*****DATE*****/
+
+#dateContainer {
+	position: absolute;
+	height: 40px;
+	width: 325px;
+	right: 40px;
+	top:150px;
+}
+
+#curDate {
+	font-size: 32px;
+	position: relative;
+	top:-20px;
+}
+
+/*****WEATHER*****/
+
+/**Current Weather**/
+
+#currentWeatherContainer {
+
+	width:250px;
+	height: 80px;
+	position: absolute;
+	top: 60px;
+	left: 35px;
+
+}
+#curWeatherIcon {
+
+	top:5px;
+	left:15px;
+	height: 80px;
+	width:91px;
+
+}
+
+#curTemp {
+	font-size: 80px;
+	top:-60px;
+	left:125px;
+}
+
+#degreesC {
+	top:-10px;
+	left:215px;
+}
+
+/**Future Weather**/
+
+#futureWeatherContainer {
+
+	width:250px;
+	height: 70px;
+	position: absolute;
+	top: 190px;
+	left: 35px;
+}
+
+#nextDay1, #nextDay2, #nextDay3,#nextDay1temp, #nextDay2temp, #nextDay3temp {
+	font-size:18px;
+}
+
+#nextDay1 {
+	top:-10px;
+	left: 0px;
+}
+#nextDay1temp {
+	top:-10px;
+	left: 160px;
+}
+
+#nextDay2 {
+	top:10px;
+	left: 0px;
+}
+#nextDay2temp {
+	top:10px;
+	left: 160px;
+}
+
+#nextDay3 {
+	top:30px;
+	left: 0px;
+}
+#nextDay3temp {
+	top:30px;
+	left: 160px;
+}
+
+
+/**Current Location**/
+
+#locationContainer {
+	height: 40px;
+	position: absolute;
+	top:145px;
+	left:35px;
+}
+
+#currentLocation {
+	position: relative;
+	top:-20px;
+}
+
+/**Travel**/
+
+#travelContainer {
+	position: absolute;
+	height: 40px;
+	width: 325px;
+	right: 40px;
+	top:160px;
+}
+
+#travelTime {
+	font-size: 20px;
+	position: relative;
+	top: 30px;
+}
+
+

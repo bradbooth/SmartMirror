@@ -1,0 +1,89 @@
+<doctype HTML>
+
+<html>
+	<head>
+	
+		<link rel="stylesheet" href="style.css" title="external style sheet">
+		<link rel='stylesheet' type='text/css'
+			  href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' >
+	</head>
+	
+	
+	<body>
+	
+	<!-- Time -->
+	<div id = "timeContainer">
+		<h1 id = "hour" > 00 </h1>
+		<h1 id = "minute"> :00 </h1>
+
+		<h3 id = "second"> 00 </h3>
+
+		<h3 id = "am"> AM </h3>
+		<h3 id = "pm"> PM </h3>
+	</div>
+
+	<!-- Date -->
+	<div id = "dateContainer" align="right">
+		<h1 id = curDate style="text-align:right" > Thursday May 5th </h1>
+	</div>
+
+	<!-- Travel time -->
+	<div id = 'travelContainer' align="right">
+		<h1 id = travelTime style="text-align:right" >00 minutes to Work </h1>
+	</div>
+
+	<!-- Weather -->
+	<div id = "currentWeatherContainer">
+		<img id = "curWeatherIcon" src = "WeatherIcons\sun.png">
+		<h1 id = "curTemp"> 25 </h1>
+		<h3 id = "degreesC"> &deg;C </h3>
+	</div>
+
+	<div id = futureWeatherContainer>
+		<h2 id = nextDay1>Friday</h2>
+		<h2 id = nextDay2>Saturday</h2>
+		<h2 id = nextDay3>Sunday</h2>
+
+		<h2 id = nextDay1temp>00</h2>
+		<h2 id = nextDay2temp>00</h2>
+		<h2 id = nextDay3temp>00</h2>
+	</div>
+
+
+	<!-- Location -->
+	<div id = "locationContainer">
+		<h1 id = "currentLocation">Johannesburg</h1>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="time.js"></script>
+	<script src="date.js"></script>
+	<script src="weather.js"></script>
+	<script src="travel.js"></script>
+	
+	<script type = "text/javascript"> 
+
+	//TIME
+	setInterval("updateTime()", 1000);
+
+	//DATE
+	updateDate();
+	setInterval("updateDate()", 60000);
+	
+	//WEATHER
+	updateWeather();
+	setInterval("updateWeather()", 3600000);
+
+	//Travel
+	updateTravelTime();
+	setInterval("updateTravelTime()", 1800000);
+	
+
+	</script>
+
+
+
+	</body>
+
+
+</html>
