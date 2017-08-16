@@ -1,6 +1,6 @@
 
 
-var container = document.getElementById("container");
+var container = document.getElementById("container1");
 
 var imageWidth ;
 var imageHeight;
@@ -11,10 +11,11 @@ var gridWidth = 100;
 
 var enableDrag = false;
 
-
-window.onload = function() {
-	
-	//Initialize starting attributes of picture
+    
+$(document).ready(function () {
+    
+    buildGrid();
+    //Initialize starting attributes
 	container.style.backgroundPositionX = '0px';
 	container.style.backgroundPositionY = '0px';
 	
@@ -26,19 +27,24 @@ window.onload = function() {
     container.style.position = 'absolute';
     container.style.top = "10px";
     container.style.left = "10px";
-}
+    
+});
+
 
 //Determine what happens when the mouse clicked
 function mouseDownEvent(e){
-
+    console.log()
     //If we're clicking on the box
-	if(e.target.id == "container"){
-        //console.log("Clicked on box");
+	if($(e.target).attr('class') == "box"){
+        container = document.getElementById(e.target.id);
+        container.style.position = 'absolute';
+        $(container).addClass('shadow');
+        $(container).css('z-index',10);
         xInitial = e.clientX;
         yInitial = e.clientY;
 		//Store initial image location
-		containerTopInitial = parseInt(container.style.top);
-	    containerLeftInitial = parseInt(container.style.left);
+		containerTopInitial =  $('#' + e.target.id).position().top;
+	    containerLeftInitial = $('#' + e.target.id).position().left;
 		enableDrag = true;
 		return false;
 	}else{
@@ -64,10 +70,9 @@ function mouseMoveEvent(e){
 function mouseReleaseEvent(e){
     enableDrag = false;
     snapToGrid(e.target);
-
-
+    $(container).removeClass('shadow');
+    $(container).css('z-index',1);
     return true;
-    
 }
 
 function snapToGrid(object){
@@ -80,20 +85,12 @@ function snapToGrid(object){
 }
 
 
-    
-$(document).ready(function () {
-
-    buildGrid();
-
-
-
-});
-
 function buildGrid(){
     //Grid
     
-    var rows = Math.floor($(window).height()/ gridWidth);
-    var columns = Math.floor($(window).width()/ gridWidth);
+    var rows = Math.ceil($(window).height()/ gridWidth);
+    var columns = Math.ceil($(window).width()/ gridWidth);
+
     var $row = $("<div />", {class: 'row'});
     var $square = $("<div />", {class: 'square'});
 

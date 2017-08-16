@@ -1,6 +1,6 @@
 .box {
-    background-color: darkslategray;
-    width: 300px;
+    background-color: #039AA2;
+    width: 100px;
     height: 100px;
     color: white;
     text-align: center;
@@ -9,6 +9,23 @@
     left: 0px;
 }
 
+#container1 {
+    width: 200px;
+    height: 200px;
+    color: white;
+    background-color: #167207;
+}
+
+#container2 {
+    width: 200px;
+    height: 100px;
+    color: white;
+    background-color: #3A006C;
+}
+
+.shadow{
+    box-shadow: 8px 8px 5px rgba(0,0,0,0.4);
+}
 
 #gridWrapper {
     width: 100%;
@@ -29,6 +46,5 @@
     margin: 0px;
     outline: 1px solid;
     display: inline-block;
-
     background: #FFFFFF;
 }
