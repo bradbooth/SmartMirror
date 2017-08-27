@@ -12,16 +12,21 @@ h1, h2, h3 , #am, #pm{
 
 .box {
     background-color: #000000;
-    width: 300px;
+	width: 300px;
     height: 100px;
     color: white;
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: black;
+	background-color: black;
+	display: inline-block;
 }
 
 /*****TIME*****/
+#timeContainer {
+	width: 275px;
+}
+
 #hour {
 	font-size: 80;
 	left:5px;
@@ -55,72 +60,88 @@ h1, h2, h3 , #am, #pm{
 /*****DATE*****/
 #curDate {
 	font-size: 32px;
-	position: relative;
-	top:-20px;
+	text-align: center;
 }
 
 /*****WEATHER*****/
 
 /**Current Weather**/
+#currentWeatherContainer {
+	width: 250px;
+}
+
 #curWeatherIcon {
 	top:5px;
 	left:15px;
 	height: 80px;
 	width:91px;
+	position: relative;
 }
 
 #curTemp {
 	font-size: 80px;
 	top:-60px;
-	left:125px;
+	right:25px;
 }
 
 #degreesC {
 	top:-10px;
-	left:215px;
+	right:5px;
 }
 
 /**Future Weather**/
-
+#futureWeatherContainer {
+	width: 250px;
+	height: 75px;
+}
 #nextDay1, #nextDay2, #nextDay3,#nextDay1temp, #nextDay2temp, #nextDay3temp {
 	font-size:18px;
 }
 
+#nextDay1, #nextDay2, #nextDay3 {
+	left: 10px;
+}
+
+#nextDay1temp, #nextDay2temp, #nextDay3temp {
+	right: 15px;
+}
+
 #nextDay1 {
 	top:-10px;
-	left: 0px;
 }
 #nextDay1temp {
 	top:-10px;
-	left: 160px;
 }
 
 #nextDay2 {
 	top:10px;
-	left: 0px;
 }
 #nextDay2temp {
 	top:10px;
-	left: 160px;
 }
 
 #nextDay3 {
 	top:30px;
-	left: 0px;
 }
 #nextDay3temp {
 	top:30px;
-	left: 160px;
 }
 
 
 /**Current Location**/
-#currentLocation {
+#locationContainer {
+	height: 50px;
+}
+#location {
 	position: relative;
 	top:-20px;
 }
 
 /**Travel**/
+#travelTimeContainer{
+	width: 325px;
+	height: 50px;
+}
 #travelTime {
 	font-size: 20px;
 }

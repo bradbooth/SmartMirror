@@ -1,33 +1,25 @@
 
-
-var container = document.getElementById("container1");
-
 var imageWidth ;
 var imageHeight;
 var xInitial,yInitial;
 var containerTopInitial, containerLeftInitial;
 
-var gridWidth = 100;
-
 var enableDrag = false;
 
     
 $(document).ready(function () {
-    
-    buildGrid();
+
+    counter = 0;
+    $('.box').each(function(i, obj) {
+        obj.style.top = counter + "px";
+        obj.style.left = "0px";
+        counter = counter + gridWidth * 3;
+    });
     //Initialize starting attributes
-	container.style.backgroundPositionX = '0px';
-	container.style.backgroundPositionY = '0px';
 	
 	document.onmousedown = mouseDownEvent;
 	document.onmousemove = mouseMoveEvent;
     document.onmouseup = mouseReleaseEvent;
-    
-    //Initialize values
-    container.style.position = 'absolute';
-    container.style.top = "10px";
-    container.style.left = "10px";
-    
 });
 
 
@@ -45,7 +37,8 @@ function mouseDownEvent(e){
 		//Store initial image location
 		containerTopInitial =  $('#' + e.target.id).position().top;
 	    containerLeftInitial = $('#' + e.target.id).position().left;
-		enableDrag = true;
+        enableDrag = true;
+        $('.square').css("outline-color","#1F1F1F");
 		return false;
 	}else{
 		//Otherwise if we arent in the draggable area handle it with the browser normally
@@ -72,6 +65,7 @@ function mouseReleaseEvent(e){
     snapToGrid(e.target);
     $(container).removeClass('shadow');
     $(container).css('z-index',1);
+    $('.square').css("outline-color","#000000");
     return true;
 }
 
@@ -80,26 +74,4 @@ function snapToGrid(object){
     nearestMarkerLeft = Math.round(parseInt(object.style.left) / gridWidth)*gridWidth;
     object.style.top = nearestMarkerTop;
     object.style.left = nearestMarkerLeft;
-}
-
-
-function buildGrid(){
-    //Determine numbe of rowsxcolumns based on avaliable screen size
-    var rows = Math.ceil($(window).height()/ gridWidth);
-    var columns = Math.ceil($(window).width()/ gridWidth);
-
-    var $row = $("<div />", {class: 'row'});
-    var $square = $("<div />", {class: 'square'});
-
-    //add columns to the the temp row object
-    for (var i = 0; i < columns; i++) {
-        $row.append($square.clone());
-    }
-    //clone the temp row object with the columns to the wrapper
-    for (var i = 0; i < rows; i++) {
-        $("#gridWrapper").append($row.clone());
-    }
-
-    
-
 }

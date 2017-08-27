@@ -33,8 +33,7 @@ function updateDate(){
 		var currentMonth = month[current.getMonth()];
 
 		var currentDay = current.getDate();
-		abbreviateDate(currentDay);
-
+		currentDay = abbreviateDate(currentDay);
 
 		document.getElementById("curDate").innerHTML = currentWeekday + ' ' + currentMonth + ' ' + currentDay;
 		document.getElementById("nextDay1").innerHTML = nextDay1
