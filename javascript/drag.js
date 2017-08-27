@@ -6,8 +6,9 @@ var containerTopInitial, containerLeftInitial;
 
 var enableDrag = false;
 
-var outlineHighlightColor = '61,61,61'
-var backgroundHighlightColor = '48,48,48'
+var outlineHighlightColor = '245,245,245' //'61,61,61'
+var backgroundHighlightColor = '48, 106, 201'//'48,48,48'
+var boxBackgroundHighlightColor = '10, 10, 10'//'48,48,48'
     
 $(document).ready(function () {
 
@@ -40,8 +41,10 @@ function mouseDownEvent(e){
 	    containerLeftInitial = $('#' + e.target.id).position().left;
         enableDrag = true;
         //Fade in background and outlines
-        fadeInColor('.square','outline-color',outlineHighlightColor,300);
-        fadeInColor('.square','background',backgroundHighlightColor,300);
+        fadeColor('.square','outline-color',outlineHighlightColor,0,1,300);
+        fadeColor('.square','background',backgroundHighlightColor,0,1,300);
+        fadeColor('.box','background-color',boxBackgroundHighlightColor,0,1,300);
+        
 		return false;
 	}else{
 		//Otherwise if we arent in the draggable area handle it with the browser normally
@@ -67,8 +70,10 @@ function mouseReleaseEvent(e){
     snapToGrid(e.target);
     $(container).removeClass('shadow');
     $(container).css('z-index',1);
-    setTimeout(fadeOutColor('.square','outline-color',outlineHighlightColor,300),3000);
-    setTimeout(fadeOutColor('.square','background',backgroundHighlightColor,300),3000);
+    setTimeout(fadeColor('.square','outline-color',outlineHighlightColor,1,0,300),3000);
+    setTimeout(fadeColor('.square','background',backgroundHighlightColor,1,0,300),3000);
+    fadeColor('.box','background-color',boxBackgroundHighlightColor,1,0,300);
+    setTimeout(function(){$('.box').css('background-color','rgba(0,0,0,0)')},300);
     
     return true;
 }

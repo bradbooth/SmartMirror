@@ -1,24 +1,11 @@
 
-function fadeInColor(object,attribute,color,time){
+function fadeColor(object,attribute,color,opacityBegin,opacityEnd,time){
     var div = $(object);
-    $({alpha:0}).animate({alpha:1}, {
+    $({alpha:opacityBegin}).animate({alpha:opacityEnd}, {
         duration: time,
         step: function(){
-            $('.square').css(attribute,'rgba('+color+','+this.alpha+')');
+            div.css(attribute, 'rgba('+color+','+this.alpha+')');
         }
     });
 }
-
-function fadeOutColor(object,attribute,color,time){
-    var div = $(object);
-    $({alpha:1}).animate({alpha:0}, {
-        duration: time,
-        step: function(){
-            $('.square').css(attribute, 'rgba('+color+','+this.alpha+')');
-        }
-    });
-
-}
-
-
 
