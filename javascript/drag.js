@@ -6,6 +6,8 @@ var containerTopInitial, containerLeftInitial;
 
 var enableDrag = false;
 
+var outlineHighlightColor = '61,61,61'
+var backgroundHighlightColor = '48,48,48'
     
 $(document).ready(function () {
 
@@ -25,8 +27,7 @@ $(document).ready(function () {
 
 //Determine what happens when the mouse clicked
 function mouseDownEvent(e){
-    console.log()
-    //If we're clicking on the box
+    //If we're clicking on a box
 	if($(e.target).attr('class') == "box"){
         container = document.getElementById(e.target.id);
         container.style.position = 'absolute';
@@ -34,11 +35,13 @@ function mouseDownEvent(e){
         $(container).css('z-index',10);
         xInitial = e.clientX;
         yInitial = e.clientY;
-		//Store initial image location
+		//Store container location
 		containerTopInitial =  $('#' + e.target.id).position().top;
 	    containerLeftInitial = $('#' + e.target.id).position().left;
         enableDrag = true;
-        $('.square').css("outline-color","#1F1F1F");
+        //Fade in background and outlines
+        fadeInColor('.square','outline-color',outlineHighlightColor,300);
+        fadeInColor('.square','background',backgroundHighlightColor,300);
 		return false;
 	}else{
 		//Otherwise if we arent in the draggable area handle it with the browser normally
@@ -48,7 +51,6 @@ function mouseDownEvent(e){
 
 //Determine what happens when the mouse is moving
 function mouseMoveEvent(e){
-
 	//If drag is enabled, move the image as the cursor moves
 	if(enableDrag){
 		var deltaY = e.clientY - yInitial;
@@ -65,7 +67,9 @@ function mouseReleaseEvent(e){
     snapToGrid(e.target);
     $(container).removeClass('shadow');
     $(container).css('z-index',1);
-    $('.square').css("outline-color","#000000");
+    setTimeout(fadeOutColor('.square','outline-color',outlineHighlightColor,300),3000);
+    setTimeout(fadeOutColor('.square','background',backgroundHighlightColor,300),3000);
+    
     return true;
 }
 

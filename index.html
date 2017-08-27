@@ -34,7 +34,7 @@
 
 		<!-- Weather -->
 		<div id = "currentWeatherContainer" class = "box">
-			<img id = "curWeatherIcon" src = "WeatherIcons\sun.png">
+			<img id = "curWeatherIcon" src = "WeatherIcons/sun.png">
 			<h1 id = "curTemp"> 25 </h1>
 			<h3 id = "degreesC"> &deg;C </h3>
 		</div>
@@ -55,36 +55,18 @@
 			<h1 id = "location">Johannesburg</h1>
 		</div>
 	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="javascript/css.js"></script>
+	<script src="javascript/grid.js"></script>
+	<script src="javascript/drag.js"></script>
 	<script src="javascript/time.js"></script>
 	<script src="javascript/date.js"></script>
 	<script src="javascript/weather.js"></script>
 	<script src="javascript/travel.js"></script>
-	<script src="javascript/grid.js"></script>
-	<script src="javascript/drag.js"></script>
+	<script src="javascript/init.js"></script>
 	
-	<script type = "text/javascript"> 
-
-	//TIME
-	setInterval("updateTime()", 1000);
-
-	//DATE
-	updateDate();
-	setInterval("updateDate()", 60000);
-	
-	//WEATHER
-	//updateWeather();
-	setInterval("updateWeather()", 3600000);
-
-	//Travel
-	updateTravelTime();
-	setInterval("updateTravelTime()", 1800000);
-	
-	</script>
-
-
-
-	</body>
+</body>
 
 
 </html>

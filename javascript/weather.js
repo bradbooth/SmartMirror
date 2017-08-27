@@ -2,10 +2,6 @@
 //WEATHER
 url = 'http://api.openweathermap.org/data/2.5/forecast?APPID=a9275dcfa95eef6ebc6ad479cfd68028&q=Toronto, CA&units=metric'
 
-$(document).ready(function () {
-	updateWeather();
-});
-
 function updateWeather(){
 
 	$.getJSON(url,function (data) { 
