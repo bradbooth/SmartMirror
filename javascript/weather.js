@@ -52,7 +52,7 @@ function  getConditionIcon(conditionTxt){
 		case 'Clear':
 			return 'Sun.png'
 		case 'Clouds':
-			return 'Clouds.png'
+			return 'Cloudy.png'
 		
 	}
 

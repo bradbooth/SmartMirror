@@ -1,9 +1,7 @@
 
 body {
-
-	background-color: black;
+	background-color: #93B6F1;
 }
-
 
 h1, h2, h3 , #am, #pm{
 	font-family: 'Roboto';
@@ -12,24 +10,18 @@ h1, h2, h3 , #am, #pm{
 	font-weight: 300;
 }
 
-img {
-	position:absolute;
+.box {
+    background-color: #000000;
+    width: 300px;
+    height: 100px;
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: black;
 }
-
-#timeContainer, #dateContainer, #currentWeatherContainer, #futureWeatherContainer, #locationContainer {
-	background-color: black;
-}
-
 
 /*****TIME*****/
-#timeContainer {
-	position: absolute;
-	height: 80px;
-	width: 265px;
-	right:35px;
-	top:60px;
-}
-
 #hour {
 	font-size: 80;
 	left:5px;
@@ -61,15 +53,6 @@ img {
 }
 
 /*****DATE*****/
-
-#dateContainer {
-	position: absolute;
-	height: 40px;
-	width: 325px;
-	right: 40px;
-	top:150px;
-}
-
 #curDate {
 	font-size: 32px;
 	position: relative;
@@ -79,23 +62,11 @@ img {
 /*****WEATHER*****/
 
 /**Current Weather**/
-
-#currentWeatherContainer {
-
-	width:250px;
-	height: 80px;
-	position: absolute;
-	top: 60px;
-	left: 35px;
-
-}
 #curWeatherIcon {
-
 	top:5px;
 	left:15px;
 	height: 80px;
 	width:91px;
-
 }
 
 #curTemp {
@@ -110,15 +81,6 @@ img {
 }
 
 /**Future Weather**/
-
-#futureWeatherContainer {
-
-	width:250px;
-	height: 70px;
-	position: absolute;
-	top: 190px;
-	left: 35px;
-}
 
 #nextDay1, #nextDay2, #nextDay3,#nextDay1temp, #nextDay2temp, #nextDay3temp {
 	font-size:18px;
@@ -153,33 +115,14 @@ img {
 
 
 /**Current Location**/
-
-#locationContainer {
-	height: 40px;
-	position: absolute;
-	top:145px;
-	left:35px;
-}
-
 #currentLocation {
 	position: relative;
 	top:-20px;
 }
 
 /**Travel**/
-
-#travelContainer {
-	position: absolute;
-	height: 40px;
-	width: 325px;
-	right: 40px;
-	top:160px;
-}
-
 #travelTime {
 	font-size: 20px;
-	position: relative;
-	top: 30px;
 }
 
 

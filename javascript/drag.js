@@ -58,8 +58,8 @@ function mouseMoveEvent(e){
 
 	//If drag is enabled, move the image as the cursor moves
 	if(enableDrag){
-		var deltaY = e.clientY - yInitial;//Calculate the change in y coordinates
-        var deltaX = e.clientX - xInitial;//Calculate the change in x coordinates
+		var deltaY = e.clientY - yInitial;
+        var deltaX = e.clientX - xInitial;
         container.style.top = containerTopInitial + deltaY + 'px';
         container.style.left = containerLeftInitial + deltaX + 'px';
     }
@@ -76,18 +76,15 @@ function mouseReleaseEvent(e){
 }
 
 function snapToGrid(object){
-    //Grid marker every X px
-    gridMarker = 100;
-    nearestMarkerTop = Math.round(parseInt(object.style.top) / gridMarker)*gridMarker;
-    nearestMarkerLeft = Math.round(parseInt(object.style.left) / gridMarker)*gridMarker;
+    nearestMarkerTop = Math.round(parseInt(object.style.top) / gridWidth)*gridWidth;
+    nearestMarkerLeft = Math.round(parseInt(object.style.left) / gridWidth)*gridWidth;
     object.style.top = nearestMarkerTop;
     object.style.left = nearestMarkerLeft;
 }
 
 
 function buildGrid(){
-    //Grid
-    
+    //Determine numbe of rowsxcolumns based on avaliable screen size
     var rows = Math.ceil($(window).height()/ gridWidth);
     var columns = Math.ceil($(window).width()/ gridWidth);
 
