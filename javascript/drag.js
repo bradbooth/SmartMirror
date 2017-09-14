@@ -19,7 +19,6 @@ $(document).ready(function () {
         counter = counter + gridWidth * 3;
     });
     //Initialize starting attributes
-	
 	document.onmousedown = mouseDownEvent;
 	document.onmousemove = mouseMoveEvent;
     document.onmouseup = mouseReleaseEvent;
@@ -70,9 +69,10 @@ function mouseReleaseEvent(e){
     snapToGrid(e.target);
     $(container).removeClass('shadow');
     $(container).css('z-index',1);
-    setTimeout(fadeColor('.square','outline-color',outlineHighlightColor,1,0,300),3000);
-    setTimeout(fadeColor('.square','background',backgroundHighlightColor,1,0,300),3000);
+    fadeColor('.square','outline-color',outlineHighlightColor,1,0,300)
+    fadeColor('.square','background',backgroundHighlightColor,1,0,300)
     fadeColor('.box','background-color',boxBackgroundHighlightColor,1,0,300);
+    //Reset containers to be transparent
     setTimeout(function(){$('.box').css('background-color','rgba(0,0,0,0)')},300);
     
     return true;

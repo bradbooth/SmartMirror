@@ -13,6 +13,6 @@ $(document).ready(function () {
 
 	//Travel
 	updateTravelTime();
-	setInterval("updateTravelTime()", 1800000);
+	setInterval("test()", 1800000);
 
 });

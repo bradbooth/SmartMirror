@@ -16,14 +16,13 @@ function updateWeather(){
 		var nextDay3Temp =  Math.floor(data.list[24].main.temp);
 
 		document.getElementById("curTemp").innerHTML = currentTemp;
-		document.getElementById("currentLocation").innerHTML = city;
+		document.getElementById("location").innerHTML = city;
 		document.getElementById("curWeatherIcon").src = "weatherIcons/" + getConditionIcon(currentCondition);
 
 		document.getElementById("nextDay1temp").innerHTML = nextDay1Temp + '&deg;C';
 		document.getElementById("nextDay2temp").innerHTML = nextDay2Temp + '&deg;C';
 		document.getElementById("nextDay3temp").innerHTML = nextDay3Temp + '&deg;C';
 	});
-
 }
 
 
@@ -46,3 +45,4 @@ function  getConditionIcon(conditionTxt){
 	}
 
 }
+
